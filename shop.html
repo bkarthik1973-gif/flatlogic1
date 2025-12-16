@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shop</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      background-color: white;
+    }
+    
+    .navbar {
+      background-color: black;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo h2 {
+      color: white;
+      margin: 0;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      flex-wrap: wrap;
+    }
+
+    .nav-links li {
+      margin: 5px 15px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .icons a {
+      color: white;
+      margin-left: 15px;
+      font-size: 18px;
+    }
+
+    .shop-title {
+      text-align: center;
+      margin: 30px;
+    }
+
+    .shop-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      padding: 0 20px;
+    }
+
+    .product {
+      border: 1px solid black;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .product img {
+      width: 100%;
+      height: 180px;
+      border-radius: 7px;
+    }
+
+    .product h5 {
+      margin-top: 10px;
+    }
+
+    .product p {
+      color: gray;
+    }
+
+    .btn-cart {
+      background-color: black;
+      color: white;
+      padding: 8px;
+      width: 100%;
+      border: none;
+      margin-top: 10px;
+    }
+
+    .btn-cart:hover {
+      background-color: gray;
+    }
+
+    @media (max-width: 992px) {
+      .shop-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .shop-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .shop-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav class="navbar">
+  <div class="logo"><h2>FLATLOGIC</h2></div>
+
+  <ul class="nav-links">
+    <li><a href="Index.html">HOME</a></li>
+    <li><a href="shop.html">SHOP</a></li>
+    <li><a href="blog.html">BLOG</a></li>
+  </ul>
+
+  <div class="icons">
+    <a href="#"><i class="fas fa-search"></i></a>
+    <a href="login.html"><i class="fas fa-user"></i></a>
+    <a href="#"><i class="fas fa-heart"></i></a>
+    <a href="#"><i class="fas fa-shopping-cart"></i></a>
+  </div>
+</nav>
+
+<div class="shop-title">
+  <h2>Shop Products</h2>
+  <p>Explore our complete collection</p>
+</div>
+
+<div class="shop-grid">
+
+  <div class="product">
+    <img src="./1000033209.jpg">
+    <h5>Fancy Chair</h5>
+    <p>$70</p>
+    <button class="btn-cart" onclick="addToCart()">Add to Cart</button>
+  </div>
+
+
+  <div class="product">
+    <img src="./1000033210.jpg">
+    <h5>Cozy Sofa</h5>
+    <p>$150</p>
+    <button class="btn-cart" onclick="addToCart()">Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img src="./1000033211.jpg">
+    <h5>Modern Lamp</h5>
+    <p>$40</p>
+    <button class="btn-cart" onclick="addToCart()">Add to Cart</button>
+  </div>
+
+
+  <div class="product">
+    <img src="./1000033212.jpg">
+    <h5>Wooden Table</h5>
+    <p>$120</p>
+    <button class="btn-cart" onclick="addToCart()">Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img src="./1000033213.jpg">
+    <h5>Soft Pillow</h5>
+    <p>$30</p>
+    <button class="btn-cart" onclick="addToCart()">Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img src="./1000033214.jpg">
+    <h5>Scented Candle</h5>
+    <p>$15</p>
+    <button class="btn-cart" onclick="addToCart()">Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img src="./1000033215.jpg">
+    <h5>Wall Shelf</h5>
+    <p>$90</p>
+    <button class="btn-cart" onclick="addToCart()">Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img src="./wp4795357.png">
+    <h5>Floor Rug</h5>
+    <p>$60</p>
+    <button class="btn-cart" onclick="addToCart()">Add to Cart</button>
+  </div>
+
+</div>
+
+<script>
+  function addToCart() {
+    alert("Item added to cart successfully");
+  }
+</script>
+
+</body>
+</html>

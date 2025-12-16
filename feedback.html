@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit Feedback</title>
+  <link rel="stylesheet" href="flatlogic.css">
+
+  <style>
+    body {
+      background-color: lightgray;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 750px;
+    }
+
+    .form-container {
+      width: 600px;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px black;
+    }
+
+    h2 {
+      text-align: center;
+      color: black;
+      margin-bottom: 20px;
+    }
+
+    fieldset {
+      border: 2px solid gray;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    legend {
+      font-weight: bold;
+      font-size: 20px;
+      color: darkblue;
+      padding: 0px 10px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+      color: black;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid gray;
+      border-radius: 5px;
+      background-color: beige;
+    }
+
+    input[type="text"]:focus,
+    textarea:focus {
+      background-color: lightyellow;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 5px;
+      margin-top: 10px;
+    }
+
+    input[type="range"] {
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 15px;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+      width: 100px;
+      padding: 10px;
+      margin-right: 10px;
+      background-color: brown;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+      background-color: bisque;
+      color: black;
+    }
+
+    .button-group {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="form-container">
+    <h2>Submit Feedback</h2>
+    <form id="feedbackForm">
+      <fieldset>
+        <legend>Customer Satisfaction Form</legend>
+
+        <label>First Name:</label>
+        <input type="text" name="firstname" required>
+
+        <label>Last Name:</label>
+        <input type="text" name="lastname" required>
+
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female
+        <input type="radio" name="gender" value="Other"> Other
+
+        <label>Customer Satisfaction:</label>
+        <input type="checkbox" name="satisfaction" value="Poor"> Poor
+        <input type="checkbox" name="satisfaction" value="Good"> Good
+        <input type="checkbox" name="satisfaction" value="Excellent"> Excellent
+
+        <label>Experience (0 to 100):</label>
+        <input type="range" name="experience" min="0" max="100">
+
+        <label>Feedback:</label>
+        <textarea name="feedback" rows="4" required></textarea>
+
+        <div class="button-group">
+          <input type="submit" value="Submit">
+          <input type="reset" value="Reset">
+        </div>
+      </fieldset>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("feedbackForm").addEventListener("submit", function(e) {
+      e.preventDefault(); 
+      alert("Thank you for your feedback!");
+      window.location.href = "flatlogic.html";
+    });
+  </script>
+
+</body>
+</html>

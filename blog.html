@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      background-color: white;
+    }
+
+    .navbar {
+      background-color: black;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo h2 {
+      color: white;
+      margin: 0;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li {
+      margin: 0 15px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .icons a {
+      color: white;
+      margin-left: 15px;
+      font-size: 18px;
+    }
+
+    .blog-title {
+      text-align: center;
+      margin: 30px;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 0 20px;
+    }
+
+    .blog-card {
+      border: 1px solid black;
+      padding: 15px;
+    }
+
+    .blog-card img {
+      width: 100%;
+      height: 180px;
+    }
+
+    .blog-card h5 {
+      margin-top: 10px;
+    }
+
+    .blog-card p {
+      color: gray;
+    }
+
+    .btn-read {
+      background-color: black;
+      color: white;
+      padding: 8px;
+      border: none;
+      margin-top: 10px;
+    }
+
+    .btn-read:hover {
+      background-color: gray;
+    }
+
+    .blog-content {
+      display: none;
+      margin-top: 10px;
+      font-size: 14px;
+      color: black;
+    }
+
+    @media (max-width: 768px) {
+      .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav class="navbar">
+  <div class="logo"><h2>FLATLOGIC</h2></div>
+
+  <ul class="nav-links">
+    <li><a href="Index.html">HOME</a></li>
+    <li><a href="shop.html">SHOP</a></li>
+    <li><a href="blog.html">BLOG</a></li>
+  </ul>
+
+  <div class="icons">
+    <a href="#"><i class="fas fa-search"></i></a>
+    <a href="login.html"><i class="fas fa-user"></i></a>
+    <a href="#"><i class="fas fa-heart"></i></a>
+    <a href="#"><i class="fas fa-shopping-cart"></i></a>
+  </div>
+</nav>
+
+<div class="blog-title">
+  <h2>Our Blog</h2>
+  <p>Ideas, trends, and inspiration for your home</p>
+</div>
+
+<div class="blog-grid">
+
+  <div class="blog-card">
+    <img src="wp5804699.webp">
+    <h5>Modern Living Room Ideas</h5>
+    <p>Simple design tips to improve your living space.</p>
+    <button class="btn-read" onclick="toggleContent(1)">Read More</button>
+    <div class="blog-content" id="content1">
+      Modern living rooms focus on clean layouts, neutral colors, and functional furniture.
+      Use minimal decor, proper lighting, and comfortable seating to create a welcoming space.
+    </div>
+  </div>
+
+  <div class="blog-card">
+    <img src="wp4795357.png">
+    <h5>Furniture Trends 2025</h5>
+    <p>Discover the latest furniture styles this year.</p>
+    <button class="btn-read" onclick="toggleContent(2)">Read More</button>
+    <div class="blog-content" id="content2">
+      Furniture trends in 2025 include sustainable materials, modular designs,
+      and multi-purpose furniture that saves space and improves usability.
+    </div>
+  </div>
+
+  <div class="blog-card">
+    <img src="OIP.jpeg">
+    <h5>Decor That Makes a Difference</h5>
+    <p>Small decor items that change your home completely.</p>
+    <button class="btn-read" onclick="toggleContent(3)">Read More</button>
+    <div class="blog-content" id="content3">
+      Adding plants, wall art, cushions, and lamps can completely transform a room
+      without spending too much money.
+    </div>
+  </div>
+
+  <div class="blog-card">
+    <img src="wp5804699.webp">
+    <h5>Choosing the Right Sofa</h5>
+    <p>Comfort and style for your living room.</p>
+    <button class="btn-read" onclick="toggleContent(4)">Read More</button>
+    <div class="blog-content" id="content4">
+      When choosing a sofa, consider size, fabric, comfort, and durability.
+      Neutral colors work best for long-term usage.
+    </div>
+  </div>
+
+  <div class="blog-card">
+    <img src="wp4795357.png">
+    <h5>Lighting Tips for Your Home</h5>
+    <p>How lighting affects mood and space.</p>
+    <button class="btn-read" onclick="toggleContent(5)">Read More</button>
+    <div class="blog-content" id="content5">
+      Use warm lights in bedrooms, bright lights in work areas,
+      and decorative lamps to enhance the beauty of your home.
+    </div>
+  </div>
+
+  <div class="blog-card">
+    <img src="OIP.jpeg">
+    <h5>Minimalist Home Design</h5>
+    <p>Less is more when it comes to design.</p>
+    <button class="btn-read" onclick="toggleContent(6)">Read More</button>
+    <div class="blog-content" id="content6">
+      Minimalist design focuses on simplicity, functionality,
+      and clutter-free spaces using fewer colors and clean layouts.
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function toggleContent(id) {
+    var content = document.getElementById("content" + id);
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  }
+</script>
+
+</body>
+</html>
